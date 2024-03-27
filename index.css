@@ -1,0 +1,242 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.wrapper{
+    overflow-x: hidden;
+    width: 100vw;
+    height: 100vh;
+}
+.container{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.folio img{
+    width: 200px;
+    height: 200px;
+    border: 2px solid white;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.circle1{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-image: linear-gradient(45deg,aqua,white);
+    position: absolute;
+    top: 40px;
+    left: 450px;
+    animation: shake1 10s alternate infinite;
+    z-index: 10;
+    box-shadow: 10px 10px 100px aqua;
+}
+@keyframes shake1{
+    from{
+        left: 450px;
+    }
+    to{
+        scale: 1.2;
+        left: 350px;
+    }
+}
+.circle2{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background-image: linear-gradient(45deg,pink,rgb(211, 88, 88));
+    position: absolute;
+    bottom: 20px;
+    right: 400px;
+    animation: shake2 5s alternate infinite;
+    z-index: 10;
+    box-shadow: 10px 10px 100px pink;
+}
+@keyframes shake2{
+    from{
+        scale: 1.1;
+        right: 400px;
+    }
+    to{
+        right: 350px;
+    }
+}
+.folio h1{
+    text-align: center;
+    font-family: sans-serif;
+    color: white;
+}
+.folio h2{
+    font-family: sans-serif;
+    color: gray;
+}
+.folio{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 50;
+    gap: 2rem;
+    background-color: #ffffff1a;
+    border: 1px solid whitesmoke;
+    width: 400px;
+    height: 550px;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    backdrop-filter: blur(15px);
+}
+.button{
+    width: 400px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.btn-style{
+    background-color: #ffffff1a;
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+    border: 1px solid gray;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all .5s;
+}
+.btn-style:hover{
+    color: black;
+    background-color: gray;
+}
+.content{
+    position: absolute;
+    background-color: #000000b3;
+    backdrop-filter: blur(10px);
+    width: 550px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    border-radius: 20px;
+    border: 1px solid white;
+    z-index: 100;
+    scale: 0;
+    transition: all .5s;
+}
+.action{
+    scale: 1;
+}
+.overlay{
+    position: absolute;
+    background-color: rgba(128, 128, 128, 0.237);
+    /* background-color: aqua; */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 70;
+    opacity: 0;
+    transition: all .5s;
+    pointer-events: none;
+}
+.action-overlay{
+    opacity: 1;
+    pointer-events: initial;
+}
+.close{
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
+.content h3{
+    color: white;
+    font-family: sans-serif;
+    line-height: 1.5rem;
+}
+.icon-container{
+    display: flex;
+    justify-content: space-evenly;
+}
+.icon-container a{
+    padding: 1.5rem; 
+    border-radius: 50%;
+    transition: all .5s;
+}
+.icon{
+    font-size: 30px;
+    transition: all .5s;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font-family: sans-serif;
+    border-bottom: 1px solid gray;
+    padding-bottom: 1rem;
+}
+.fa-facebook-f{
+    padding-left: .3rem;
+    padding-right: .3rem;
+    color: rgb(39, 39, 116);
+}
+.facebook{
+    border: 1px solid rgb(39, 39, 116);
+}
+.facebook:hover{
+    background-color: rgb(39, 39, 116);
+}
+.facebook:hover .fa-facebook-f{
+    color: white;
+}
+.fa-twitter{
+    color: rgb(6, 184, 244);
+}
+.twitter:hover{
+    background-color: rgb(6, 184, 244);
+}
+.twitter:hover .fa-twitter{
+    color: white;
+}
+.fa-instagram{
+    color: rgb(244, 0, 199);
+}
+.instagram:hover{
+    background-color: rgb(244,0,199);
+}
+.instagram:hover .fa-instagram{
+    color: white;
+}
+.fa-whatsapp{
+    color: green;
+}
+.whatsapp:hover{
+    background-color: green;
+}
+.whatsapp:hover .fa-whatsapp{
+    color: white;
+}
+.fa-telegram{
+    color: rgb(60, 60, 235);
+}
+.telegram:hover{
+    background-color: rgb(60, 60, 235);
+}
+.telegram:hover .fa-telegram{
+    color: white;
+}
+.twitter{
+    border: 1px solid rgb(6, 184, 244);
+}
+.instagram{
+    border: 1px solid rgb(244, 0, 199);
+}
+.whatsapp{
+    border: 1px solid green;
+}
+.telegram{
+    border: 1px solid rgb(60, 60, 235);
+}
